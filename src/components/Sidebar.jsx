@@ -32,7 +32,7 @@ function Sidebar() {
           Overview
         </Link>
 
-        <Link to={'/provider/services'}
+        <Link to={'/provider/manage-services'}
          className="flex items-center gap-3 rounded-xl px-4 py-3 text-sm font-bold text-slate-300 transition hover:bg-white/10 hover:text-white">
           <HiOutlineBriefcase className="text-xl" />
           My services

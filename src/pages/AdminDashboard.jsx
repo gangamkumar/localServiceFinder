@@ -43,6 +43,7 @@ function AdminDashboard() {
           </div>
         </div>
 
+        
         <section className="mt-8 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
           <StatsCard
             title="Total customers"
@@ -223,15 +224,12 @@ function AdminDashboard() {
             <button className="rounded-full bg-[#172c35] px-4 py-2 text-xs font-bold text-white">
               All
             </button>
-
             <button className="rounded-full bg-[#f5f6f0] px-4 py-2 text-xs font-bold text-slate-600">
               Pending
             </button>
-
             <button className="rounded-full bg-[#f5f6f0] px-4 py-2 text-xs font-bold text-slate-600">
               Verified
             </button>
-
             <button className="rounded-full bg-[#f5f6f0] px-4 py-2 text-xs font-bold text-slate-600">
               Rejected
             </button>
@@ -349,6 +347,162 @@ function AdminDashboard() {
 
         <section className="surface-card mt-8 overflow-hidden">
 
+          <div className="flex flex-wrap items-center justify-between gap-4 p-6">
+            <div>
+              <div className="flex items-center gap-2">
+                <HiOutlineUsers className="text-2xl text-[#719238]" />
+                <h2 className="text-xl font-extrabold">
+                  Customer verification
+                </h2>
+              </div>
+
+              <p className="mt-1 text-sm text-slate-500">
+                Review and verify customer accounts.
+              </p>
+            </div>
+
+            <span className="rounded-full bg-amber-50 px-3 py-2 text-xs font-bold text-amber-700">
+              2 awaiting review
+            </span>
+          </div>
+
+          <div className="overflow-x-auto">
+            <table className="w-full min-w-[750px] text-left text-sm">
+              <thead className="bg-[#f7f8f3] text-xs uppercase tracking-wide text-slate-500">
+                <tr>
+                  <th className="px-6 py-4">Customer</th>
+                  <th className="px-6 py-4">Email</th>
+                  <th className="px-6 py-4">Location</th>
+                  <th className="px-6 py-4">ID proof</th>
+                  <th className="px-6 py-4">Status</th>
+                </tr>
+              </thead>
+
+              <tbody className="divide-y divide-slate-100">
+
+                <tr className="hover:bg-[#fafbf8]">
+                  <td className="px-6 py-5 font-bold">Priya Nair</td>
+                  <td className="px-6 py-5 text-slate-500">priya@example.com</td>
+                  <td className="px-6 py-5 text-slate-500">Kochi</td>
+                  <td className="px-6 py-5 text-slate-500">Submitted</td>
+                  <td className="px-6 py-5">
+                    <BookingStatusBadge status="Pending" />
+                  </td>
+                </tr>
+
+                <tr className="hover:bg-[#fafbf8]">
+                  <td className="px-6 py-5 font-bold">Anand Kumar</td>
+                  <td className="px-6 py-5 text-slate-500">anand@example.com</td>
+                  <td className="px-6 py-5 text-slate-500">Trivandrum</td>
+                  <td className="px-6 py-5 text-slate-500">Submitted</td>
+                  <td className="px-6 py-5">
+                    <BookingStatusBadge status="Verified" />
+                  </td>
+                </tr>
+
+                <tr className="hover:bg-[#fafbf8]">
+                  <td className="px-6 py-5 font-bold">Meera S</td>
+                  <td className="px-6 py-5 text-slate-500">meera@example.com</td>
+                  <td className="px-6 py-5 text-slate-500">Kollam</td>
+                  <td className="px-6 py-5 text-slate-500">Not submitted</td>
+                  <td className="px-6 py-5">
+                    <BookingStatusBadge status="Pending" />
+                  </td>
+                </tr>
+
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section className="surface-card mt-8 overflow-hidden">
+
+          <div className="flex flex-wrap items-center justify-between gap-4 p-6">
+            <div>
+              <div className="flex items-center gap-2">
+                <HiOutlineBriefcase className="text-2xl text-[#719238]" />
+                <h2 className="text-xl font-extrabold">
+                  Service verification
+                </h2>
+              </div>
+
+              <p className="mt-1 text-sm text-slate-500">
+                Review services submitted by providers before approval.
+              </p>
+            </div>
+
+            <span className="rounded-full bg-amber-50 px-3 py-2 text-xs font-bold text-amber-700">
+              2 awaiting review
+            </span>
+          </div>
+
+          <div className="overflow-x-auto">
+            <table className="w-full min-w-[850px] text-left text-sm">
+              <thead className="bg-[#f7f8f3] text-xs uppercase tracking-wide text-slate-500">
+                <tr>
+                  <th className="px-6 py-4">Service name</th>
+                  <th className="px-6 py-4">Provider</th>
+                  <th className="px-6 py-4">Category</th>
+                  <th className="px-6 py-4">Price</th>
+                  <th className="px-6 py-4">Status</th>
+                  <th className="px-6 py-4">Action</th>
+                </tr>
+              </thead>
+
+              <tbody className="divide-y divide-slate-100">
+
+                <tr className="hover:bg-[#fafbf8]">
+                  <td className="px-6 py-5 font-bold">Pipe Leakage Repair</td>
+                  <td className="px-6 py-5">Arun Kumar</td>
+                  <td className="px-6 py-5 text-slate-500">Plumbing</td>
+                  <td className="px-6 py-5 font-bold">₹499</td>
+                  <td className="px-6 py-5">
+                    <BookingStatusBadge status="Pending" />
+                  </td>
+                  <td className="px-6 py-5">
+                    <span className="rounded-lg bg-amber-50 px-3 py-2 text-xs font-bold text-amber-700">
+                      Review
+                    </span>
+                  </td>
+                </tr>
+
+                <tr className="hover:bg-[#fafbf8]">
+                  <td className="px-6 py-5 font-bold">Bathroom Fitting</td>
+                  <td className="px-6 py-5">Arun Kumar</td>
+                  <td className="px-6 py-5 text-slate-500">Plumbing</td>
+                  <td className="px-6 py-5 font-bold">₹799</td>
+                  <td className="px-6 py-5">
+                    <BookingStatusBadge status="Pending" />
+                  </td>
+                  <td className="px-6 py-5">
+                    <span className="rounded-lg bg-amber-50 px-3 py-2 text-xs font-bold text-amber-700">
+                      Review
+                    </span>
+                  </td>
+                </tr>
+
+                <tr className="hover:bg-[#fafbf8]">
+                  <td className="px-6 py-5 font-bold">Tap Installation</td>
+                  <td className="px-6 py-5">Rahul Thomas</td>
+                  <td className="px-6 py-5 text-slate-500">Plumbing</td>
+                  <td className="px-6 py-5 font-bold">₹350</td>
+                  <td className="px-6 py-5">
+                    <BookingStatusBadge status="Verified" />
+                  </td>
+                  <td className="px-6 py-5">
+                    <span className="text-xs font-semibold text-slate-400">
+                      No action
+                    </span>
+                  </td>
+                </tr>
+
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section className="surface-card mt-8 overflow-hidden">
+
           <div className="flex items-center justify-between gap-3 p-6">
             <div>
               <h2 className="text-xl font-extrabold">
@@ -416,6 +570,7 @@ function AdminDashboard() {
             </table>
           </div>
         </section>
+
         <div className="mt-8 rounded-2xl bg-[#172c35] p-6 text-white">
           <div className="flex flex-wrap items-center justify-between gap-4">
             <div>
@@ -428,7 +583,7 @@ function AdminDashboard() {
               </h2>
 
               <p className="mt-2 text-sm text-slate-300">
-                Review providers and monitor platform activity.
+                Review customers, providers and services, and monitor platform activity.
               </p>
             </div>
 

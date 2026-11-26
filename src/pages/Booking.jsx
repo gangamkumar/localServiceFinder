@@ -1,22 +1,20 @@
-
 import {
   HiOutlineCalendar,
   HiOutlineLocationMarker,
   HiOutlineClipboardList,
   HiOutlineShieldCheck,
   HiOutlineCheckCircle,
+  HiOutlinePhotograph,
+  HiOutlineCloudUpload,
 } from "react-icons/hi";
 
 function Booking() {
   return (
     <main className="page-container py-12">
-    
       <div>
         <p className="section-label">BOOK A SERVICE</p>
 
-        <h1 className="section-title mt-3">
-          Let's get the job done.
-        </h1>
+        <h1 className="section-title mt-3">Let's get the job done.</h1>
 
         <p className="mt-3 text-slate-500">
           Share a few details to prepare your service request.
@@ -24,7 +22,6 @@ function Booking() {
       </div>
 
       <div className="mt-9 grid items-start gap-7 lg:grid-cols-[1fr_350px]">
-
         <div className="surface-card p-6 md:p-8">
           <h2 className="text-xl font-extrabold text-[#172c35]">
             Booking details
@@ -42,10 +39,7 @@ function Booking() {
             <div className="flex items-center gap-3 rounded-xl border border-[#e1e5dc] px-4">
               <HiOutlineCalendar className="text-xl text-[#719238]" />
 
-              <input
-                type="date"
-                className="w-full py-3.5 outline-none"
-              />
+              <input type="date" className="w-full py-3.5 outline-none" />
             </div>
           </div>
 
@@ -98,6 +92,42 @@ function Booking() {
             </div>
           </div>
 
+          <div className="mt-6">
+            <label className="mb-2 block text-sm font-bold text-[#172c35]">
+              Upload complaint images
+              <span className="ml-2 font-normal text-slate-400">
+                (Optional)
+              </span>
+            </label>
+
+            <label
+              htmlFor="complaintImages"
+              className="flex cursor-pointer flex-col items-center justify-center rounded-xl border-2 border-dashed border-[#cbd5c0] bg-[#fafbf7] px-5 py-8 text-center transition hover:border-[#719238] hover:bg-[#f1f4e8]"
+            >
+              <div className="grid h-14 w-14 place-items-center rounded-full bg-[#eaf1d8]">
+                <HiOutlineCloudUpload className="text-3xl text-[#719238]" />
+              </div>
+
+              <p className="mt-4 text-sm font-extrabold text-[#172c35]">
+                Click to upload images
+              </p>
+
+              <p className="mt-2 text-xs text-slate-500">
+                Add photos showing the problem you are facing.
+              </p>
+
+              <p className="mt-2 text-xs text-slate-400">PNG, JPG or JPEG</p>
+
+              <input
+                id="complaintImages"
+                type="file"
+                accept="image/png, image/jpeg"
+                multiple
+                className="hidden"
+              />
+            </label>
+          </div>
+
           <div className="accent-btn mt-7 w-full cursor-default text-center">
             Confirm booking request
           </div>
@@ -129,9 +159,7 @@ function Booking() {
                   Arun Kumar
                 </p>
 
-                <p className="mt-1 text-sm text-slate-500">
-                  Plumbing service
-                </p>
+                <p className="mt-1 text-sm text-slate-500">Plumbing service</p>
               </div>
             </div>
 
@@ -168,7 +196,8 @@ function Booking() {
             </div>
 
             <p className="mt-2 text-xs leading-5 text-slate-500">
-              Connect with verified local professionals for your home service needs.
+              Connect with verified local professionals for your home service
+              needs.
             </p>
           </div>
 
